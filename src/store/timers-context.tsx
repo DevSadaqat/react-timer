@@ -1,7 +1,6 @@
 import { createContext, ReactNode, useContext, useReducer } from 'react';
-import Timers from '../components/Timers';
 
-type Timer = {
+export type Timer = {
   name: string;
   duration: number;
 };
@@ -78,6 +77,7 @@ const timeReducer = (state: TimersState, action: Action): TimersState => {
       ],
     };
   }
+  return state;
 };
 
 const TimerContextProvider = ({ children }: TimerContextProviderProps) => {
